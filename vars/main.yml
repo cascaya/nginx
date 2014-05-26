@@ -10,4 +10,5 @@ nginx_ubuntu_pkg:
   - python-selinux
   - nginx
 
+nginx_ansible_managed_template: "## Nginx templalate managed by Ansible ##"
   

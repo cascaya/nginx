@@ -45,7 +45,7 @@
   tags: nginx
   shell:
     free_form=yes
-    grep -rl '#Ansible managed' --exclude='*nginx.conf*' --exclude='*default*' /etc/nginx/ ; if [ $? == 1 ]; then exit 0; fi 
+    grep -rl '{{ nginx_ansible_managed_template }}' --exclude='*nginx.conf*' --exclude='*default*' /etc/nginx/ ; if [ $? == 1 ]; then exit 0; fi 
   register: nginx_sites_configured
 
 - name: remove old sites 
